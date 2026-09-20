@@ -559,28 +559,28 @@
             id="comment"
             placeholder="Text input"
           ></textarea>
+          <div class="div-policy">
+            <input
+              class="checkbox sr-only"
+              type="checkbox"
+              name="privacy-policy"
+              id="privacy-policy"
+              value="accepted"
+              required
+            />
+            <label class="label-chekbox" for="privacy-policy">
+              <span class="icons-consent">
+                <svg class="icons-chekbox" width="10" height="8">
+                  <use href="./images/icons.svg#check-mark" />
+                </svg>
+              </span>
+              <span class="span-text-policy"
+                >I accept the terms and conditions of the
+                <a class="span-policy" href="#">Privacy Policy</a></span
+              >
+            </label>
+          </div>
         </form>
-        <div class="div-policy">
-          <input
-            class="checkbox sr-only"
-            type="checkbox"
-            name="privacy-policy"
-            id="privacy-policy"
-            value="accepted"
-            required
-          />
-          <label class="label-chekbox" for="privacy-policy">
-            <span class="icons-consent">
-              <svg class="icons-chekbox" width="10" height="8">
-                <use href="./images/icons.svg#check-mark" />
-              </svg>
-            </span>
-            <span class="span-text-policy"
-              >I accept the terms and conditions of the
-              <a class="span-policy" href="#">Privacy Policy</a></span
-            >
-          </label>
-        </div>
         <button class="btn-send" type="submit">Send</button>
       </div>
     </div>

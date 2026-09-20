@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
 
   opacity: 0;
   pointer-events: none;
@@ -16,12 +17,12 @@
 .modal-overlay.is-open {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 .modal {
   border-radius: 4px;
   padding: 72px 24px 24px;
   width: 408px;
-  height: 582px;
   box-shadow:
     0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12),
@@ -31,6 +32,9 @@
 }
 .exit-modal {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 24px;
   right: 24px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -38,7 +42,11 @@
   width: 24px;
   height: 24px;
   background: #e7e9fc;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #2e2f42;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icons-input {
+  margin-bottom: 8px;
 }
 .modal-text {
   display: flex;
@@ -50,6 +58,7 @@
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 16px;
 }
 .form-name {
   font-family: "Roboto", sans-serif;
@@ -58,6 +67,7 @@
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  margin-bottom: 4px;
 }
 .input-form {
   background: transparent;
@@ -66,10 +76,14 @@
   padding: 8px 38px;
   width: 360px;
   height: 40px;
-  max-width: 360px;
-  min-height: 40px;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
 }
 
 .label-input {
@@ -82,6 +96,15 @@
   left: 16px;
   color: #2e2f42;
   transform: translateY(-50%);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.text-input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #434455;
 }
 textarea {
   outline: none;
@@ -92,6 +115,7 @@ textarea {
   width: 360px;
   height: 120px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 16px;
 }
 
 .label-chekbox {
@@ -104,9 +128,9 @@ textarea {
   align-items: center;
   border-radius: 2px;
   border: 0.88px solid rgba(46, 47, 66, 0.4);
-  width: 14px;
-  height: 14px;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 16px;
+  height: 16px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .text-input::placeholder {
   font-family: "Roboto", sans-serif;
@@ -117,6 +141,7 @@ textarea {
   color: rgba(46, 47, 66, 0.4);
 }
 .icons-chekbox {
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
 }
 
@@ -127,6 +152,7 @@ textarea {
   line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  margin-bottom: 24px;
 }
 .span-policy {
   text-decoration: underline;
@@ -153,9 +179,8 @@ textarea {
   background: #4d5ae5;
   border: none;
   color: #fff;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 24px;
+  margin: 0 auto;
+  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -168,27 +193,15 @@ textarea {
 .btn-send:focus {
   background: #404bbf;
 }
-.input-form:focus,
+.input-form:focus + .icons-modal,
 .input-form:hover + .icons-modal {
   color: #4d5ae5;
 }
 .input-form:focus,
 .input-form:hover {
   border-color: #4d5ae5;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
 }
 .text-input:focus,
 .text-input:hover {
   border-color: #4d5ae5;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
-  color: #434455;
 }
