@@ -83,6 +83,13 @@
 }
 .footer-email {
   background: transparent;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  outline: none;
   border: 1px solid #fff;
   border-radius: 4px;
   padding: 8px 16px;
@@ -112,7 +119,7 @@
   max-width: 165px;
   background: #4d5ae5;
   border: none;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .text-btn {
   font-family: "Roboto", sans-serif;
@@ -129,13 +136,6 @@
 .footer-email:hover,
 .footer-email:focus {
   border-color: #31d0aa;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16667;
-  letter-spacing: 0.04em;
-  color: #fff;
-  outline: none;
 }
 .form-btn:hover,
 .form-btn:focus {
